@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Starter Template - Materialize</title>
+  <title>leboncoin Challenge</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -13,15 +13,15 @@
 </head>
 <body>
   <nav class="orange" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">LeBonCoin Challenge</a>
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">leboncoin Challenge</a>
       
       
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Other links</a></li>
+        <li><a href="#">. . .</a></li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Navbar Link</a></li>
+        <li><a href="#">leboncoin Menu</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
@@ -45,12 +45,18 @@
           </p>
 
           <div class="row center">
-		  <form id="upload-photos">
-            <h5 class="header col s12 light">Upload your images</h5>
-            <input id="photos-input" type="file" name="photos[]" multiple="multiple" onchange="previewFile()">
-			<img src="" height="200" alt="Image preview...">
+		 
+      
+      <div id="drop-area">
+          <form class="my-form">
+            <p>Upload multiple images with the file dialog or by dragging and dropping images onto the dashed region</p>
+            <input type="file" id="photos-input" multiple accept="image/*" onchange="previewFile()">
+            <label class="button" for="fileElem">Select some files</label>
             <br><br><button  id="upload-button">Upload</button>
-		  </form>
+          </form>
+          <progress id="progress-bar" max=100 value=0></progress>
+          <div id="gallery" /></div>
+        </div>
           </div> 
         
           <div class="row">
@@ -62,12 +68,14 @@
                             <option value="Voiture">Voiture</option>
                             <option value="Moto">Moto</option>
                           </optgroup>
-                          <optgroup label="Jeux-video">
-                            <option value="3">Option 3</option>
-                            <option value="4">Option 4</option>
+                          <optgroup label="Multimedia">
+                            <option value="Technology">Technology</option>
+                            <option value="Videogames">Videogames</option>
+                            <option value="Cellular">Cellular</option>
+                            <option value="Imagery">Imagery</option>
                           </optgroup>
                         </select>
-                        <label>Optgroups</label>
+                        <label>Category</label>
                       </div> 
                 </div>
               </form>
@@ -89,13 +97,13 @@
                     <div class="row">
                       <div class="input-field col s2">
                           <input type = "number" id="Prix" type="text" class="validate">
-                          <label for="Prix">Price</label> 
+                          <label for="Prix">€ Price</label> 
                         </div>
 					 </div>
                   </form>
                 </div>
       <div class="row right">
-        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Suggestion</a>
+        <a href="#!" id="download-button" class="btn-large waves-effect waves-light orange">Suggestion</a>
       </div>
       <br><br>
 
@@ -113,7 +121,8 @@
             <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
             <h5 class="center">Speeds up selling process</h5>
 
-            <p class="light">We just need a picture of your object to complete the data fields for the user. Using image recognition allow the seller to buy many minutes to publish his offer.</p>
+            <p class="light">We just need a picture of your object to complete the data fields for the user.
+               Using image recognition allow the seller to buy many minutes to publish his offer.</p>
           </div>
         </div>
 
@@ -145,7 +154,7 @@
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Leboncoin</h5>
+          <h5 class="white-text">leboncoin</h5>
           <p class="grey-text text-lighten-4">So we work on improving user experience on the website. Anyone who wants to sell his product will just  have to take a picture of it. Then our process will
             automatically complete the different fields. So the user won't loose his time submitting his product. Moreover it adds fairness on the process of selling if the seller 
             uses our algorithm to determine the "right price".
@@ -156,12 +165,12 @@
         <div class="col l3 s12">
           <h5 class="white-text">About us</h5>
           <ul>
-            <li><a class="white-text" href="#!"> Brieuc</a></li>
-            <li><a class="white-text" href="#!"> Dorian</a></li>
-            <li><a class="white-text" href="#!"> Kenza</a></li>
-            <li><a class="white-text" href="#!"> Khaled</a></li>
-            <li><a class="white-text" href="#!"> Saqab</a></li>
-            <li><a class="white-text" href="#!"> Shamil</a></li>
+            <li><a class="white-text" href="https://www.linkedin.com/in/brieuc-l-h%C3%A9lias-25a064b3/"> Brieuc</a></li>
+            <li><a class="white-text" href="https://www.linkedin.com/in/dorian-morel-sapene/"> Dorian</a></li>
+            <li><a class="white-text" href="https://www.linkedin.com/in/kenza-s-84b090b4/"> Kenza</a></li>
+            <li><a class="white-text" href="https://www.linkedin.com/in/khaled-faysal-9b4132115/"> Khaled</a></li>
+            <li><a class="white-text" href="https://www.linkedin.com/in/saqab-mukhtar-902755a1/"> Saqab</a></li>
+            <li><a class="white-text" href="https://www.linkedin.com/in/shamil-gasanov-389493108/"> Shamil</a></li>
           </ul>
         </div>
         <div class="col l3 s12">
@@ -197,8 +206,115 @@
 		reader.readAsDataURL(file);
 	  } else {
 		preview.src = "";
+    handleFiles(this.files)
+    files = [...files]
+    initializeProgress(files.length)
+    files.forEach(previewFile)
 	  }
 	}
+
+  // ************************ Drag and drop ***************** //
+let dropArea = document.getElementById("drop-area")
+
+// Prevent default drag behaviors
+;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+  dropArea.addEventListener(eventName, preventDefaults, false)   
+  document.body.addEventListener(eventName, preventDefaults, false)
+})
+
+// Highlight drop area when item is dragged over it
+;['dragenter', 'dragover'].forEach(eventName => {
+  dropArea.addEventListener(eventName, highlight, false)
+})
+
+;['dragleave', 'drop'].forEach(eventName => {
+  dropArea.addEventListener(eventName, unhighlight, false)
+})
+
+// Handle dropped files
+dropArea.addEventListener('drop', handleDrop, false)
+
+function preventDefaults (e) {
+  e.preventDefault()
+  e.stopPropagation()
+}
+
+function highlight(e) {
+  dropArea.classList.add('highlight')
+}
+
+function unhighlight(e) {
+  dropArea.classList.remove('active')
+}
+
+function handleDrop(e) {
+  var dt = e.dataTransfer
+  var files = dt.files
+
+  handleFiles(files)
+}
+
+let uploadProgress = []
+let progressBar = document.getElementById('progress-bar')
+
+function initializeProgress(numFiles) {
+  progressBar.value = 0
+  uploadProgress = []
+
+  for(let i = numFiles; i > 0; i--) {
+    uploadProgress.push(0)
+  }
+}
+
+function updateProgress(fileNumber, percent) {
+  uploadProgress[fileNumber] = percent
+  let total = uploadProgress.reduce((tot, curr) => tot + curr, 0) / uploadProgress.length
+  console.debug('update', fileNumber, percent, total)
+  progressBar.value = total
+}
+
+function handleFiles(files) {
+  files = [...files]
+  initializeProgress(files.length)
+//  files.forEach(uploadFile)
+  files.forEach(previewFile)
+}
+
+function previewFile(file) {
+  let reader = new FileReader()
+  reader.readAsDataURL(file)
+  reader.onloadend = function() {
+    let img = document.createElement('img')
+    img.src = reader.result
+    document.getElementById('gallery').appendChild(img)
+  }
+}
+
+function uploadFile(file, i) {
+  var url = 'https://api.cloudinary.com/v1_1/joezim007/image/upload'
+  var xhr = new XMLHttpRequest()
+  var formData = new FormData()
+  xhr.open('POST', url, true)
+  xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest')
+
+  // Update progress (can be used to show progress indicator)
+  xhr.upload.addEventListener("progress", function(e) {
+    updateProgress(i, (e.loaded * 100.0 / e.total) || 100)
+  })
+
+  xhr.addEventListener('readystatechange', function(e) {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      updateProgress(i, 100) // <- Add this
+    }
+    else if (xhr.readyState == 4 && xhr.status != 200) {
+      // Error. Inform the user
+    }
+  })
+
+  formData.append('upload_preset', 'ujpu6gyk')
+  formData.append('file', file)
+  xhr.send(formData)
+}
 	</script>
   </body>
 </html>

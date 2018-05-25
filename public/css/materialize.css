@@ -2361,7 +2361,7 @@ form button{
   color: rgb(247, 246, 243);
   background: #e67112;
   border: none;
-  width: 50px;
+  width: 60px;
   height: 30px;
   margin-top: -0px;
   margin-left: 0px;
@@ -2369,6 +2369,53 @@ form button{
   border-bottom: 4px solid rgb(250, 248, 247);
   transition: all .2s ease;
   outline: none;
+}
+
+#drop-area {
+  border: 2px dashed #ccc;
+  border-radius: 20px;
+  width: 480px;
+  font-family: sans-serif;
+  margin: 100px auto;
+  padding: 20px;
+}
+#drop-area.highlight {
+  border-color: purple;
+}
+p {
+  margin-top: 0;
+}
+.my-form {
+  margin-bottom: 10px;
+}
+#gallery {
+  margin-top: 10px;
+}
+#gallery img {
+  width: 150px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.button {
+  display: inline-block;
+  padding: 10px;
+  background: #ccc;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.button:hover {
+  background: #ddd;
+}
+#fileElem {
+  display: none;
+}
+.currencyinput {
+  border: 1px inset #ccc;
+}
+.currencyinput input {
+  border: 0;
 }
 /**
  * Hide the overflow in IE.
