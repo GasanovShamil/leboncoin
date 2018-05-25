@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "leboncoin-d6a50",
+  "private_key_id": "b8b36b00bcaceb2e0f88a38a1a83b2a059b2517c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDFwv0RHIgQMvOb\nLr4g2O6TTPKqBFgWrz+lGDKLypjcLLlh1877vtiVw+8wUlOU2jNalevNN7cvnqcn\nLxHilaAbe4dzJ/IqxmNTTtnayvqso28yXEcopCBDISgCn6MRTeq2XBv1GaDHj7xp\ne035Z/PjERS/wCvs8/Nm4vWEq8HumX8w4Jq+u4p6ip0H6VLjFbePfq3W8qaYV3VR\nPCSQeAUIeVo2kwS4Ba86OMwqFNc27mgKXFkNF0KP5tPclGBr1bgiNZl0mFArRLjB\nHS/J7L1mo3Gx2Bug/abcbE6m6M6G2GzDkzGPQvWyYg369a8u7O/IRY90se6hY7HR\nANcFpC/NAgMBAAECggEAB/CP/B+4ShI0RpQwrPKYrXrxjn2LKH9TtPtM4uDjlIoK\nd/upQzaCd+InGGUNwamlqyreuIgBR5z9MAJgm5y551s6cRdMTocAK4g8Zd+FWJNd\nM66RwCIgFiHe0IV75LDLThP89AZZ4U6LgslLtEowoqVSacUQ3may7HwLMw7kQ9co\nAEtsCu0cAiPJa4FBahcnWlc9majrj3jC1PywbWCdxmxe3i1uec/1I4nTlW6AxBgu\nzEoS2V7W+f5Qcml08cn0OWXd4O0YbLZUIVnLTKy08pGYb/6GqeQXwBBZTEg/gsxg\nSUmuMIACuLXLFqiCfpr8DDCRhL39WCn9jX1gKaKHjwKBgQD0zkKCSJaLExLGDSby\nIwyyB4uoIIN32G14pJyAhs0/mus991q0ckETC0V6jYmFJ7bLnp/TdF5qDcc0yOVJ\npAhr4V5HSPfebba0gwJwRBMl8Es6MVDWNS2dLr1Mq4R3pteONNQ2b+vsyJRRLHh3\nNSv/biKUedDBtjSR1LDcHjMROwKBgQDOzgXT/yM8i9PshKyoEPpuzhcPSiiv3vfz\npn3vsc4jr90mjjodZVSgxdvXsRCpIRNteoWFNnvwBXXEE2Kc2HtTSgbSovIW6veM\ncEBWj39vi19VwI1eg+Jt2EoPp8ttdY6i8sTN/geBv6xihXWhh5y2xM9A+Ezr6ReT\nGqB6If6ylwKBgQDGMR7DX4URvzVZxlgbfKjQkS9NxFTrd/rYy1ww6fHNZtzA5Ds5\nD68DfgKX/3KwrMBfBWMbzICLl/AJGgQXpId035Z2W+rg1y4t4krdHR/rfSlKSZbK\ndW8ibC6xncK3JAorhTWxhNcaciExvrEgwZmHSGESl7Scv6i7z9gHvSNW9QKBgHpb\nLNmUL83n0Rg0G09I1FLwvnX+Y3pCyqMu034YziURLSBdsAaqaFrDFeJU0c2vUyZI\nAm2hocyN/nJnIcY40yahOs4vOFrU5GgEFhzgw/5EEMDUrw/HqhVhjdgbZ+G4Vw8T\n4dsavGhI9n5IBiPu74q3gQQopKJDg/42F9KLAH27AoGBAOzcome9lniz/Y7CDzuS\n3SxEf0MldLpZxRHeKXyOLeOaOJqzRky1QLPMZQ1QZ4viexInaSXLGu9mWg4m1IU/\nqIwG0SldcknHLLq0KhChRAPs2BZxHkFtKOhsCIxbB2/8KH5gKO6FGHkip7qKfwtQ\nm6yC2NjflBfyWod7ohfsQ/j/\n-----END PRIVATE KEY-----\n",
+  "client_email": "dialogflow-ybkmgq@leboncoin-d6a50.iam.gserviceaccount.com",
+  "client_id": "101031395065149548694",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dialogflow-ybkmgq%40leboncoin-d6a50.iam.gserviceaccount.com"
+}
