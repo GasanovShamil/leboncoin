@@ -45,10 +45,12 @@
           </p>
 
           <div class="row center">
+		  <form id="upload-photos" method="post" action="/upload_photos" enctype="multipart/form-data"">
             <h5 class="header col s12 light">Upload your images</h5>
-            <input id = "imgImp" type="file" name="pic" accept="image/*"     >
-            <img id="selected" src="#" alt="your image"   />   
-			<p><button onclick="AppelAPI()">Send</button>   
+            <input id="photos-input" type="file" name="photos[]" multiple="multiple" onchange="previewFile()">
+			<img src="" height="200" alt="Image preview...">
+			<br><br><input  type="submit" name="Photo Uploads" value="Upload Photos" />
+		  </form>
           </div> 
         
           <div class="row">
@@ -180,5 +182,23 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script> 
+  <script src="js/upload_img.js"></script> 
+  <script>
+	function previewFile() {
+	  var preview = document.querySelector('img');
+	  var file    = document.querySelector('input[type=file]').files[0];
+	  var reader  = new FileReader();
+
+	  reader.onloadend = function () {
+		preview.src = reader.result;
+	  }
+
+	  if (file) {
+		reader.readAsDataURL(file);
+	  } else {
+		preview.src = "";
+	  }
+	}
+	</script>
   </body>
 </html>
