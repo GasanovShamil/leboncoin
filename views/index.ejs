@@ -197,7 +197,9 @@
 	  var preview = document.querySelector('img');
 	  var file    = document.querySelector('input[type=file]').files[0];
 	  var reader  = new FileReader();
-
+    files = [...files]
+  initializeProgress(file.length)
+  previewFile(file);
 	  reader.onloadend = function () {
 		preview.src = reader.result;
 	  }
@@ -207,9 +209,7 @@
 	  } else {
 		preview.src = "";
     handleFiles(this.files)
-    files = [...files]
-    initializeProgress(files.length)
-    files.forEach(previewFile)
+    
 	  }
 	}
 
