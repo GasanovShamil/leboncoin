@@ -5,7 +5,9 @@ var fs = require('fs');
 var formidable = require('formidable');
 var readChunk = require('read-chunk');
 var fileType = require('file-type');
-
+var vision = require('@google-cloud/vision');
+var client = new vision.ImageAnnotatorClient();
+var uploadedFile;
 router.get('/', function(req, res, next) {
     res.render('index', { title: 'Express' });
 });
@@ -21,6 +23,7 @@ router.post('/upload_image', function (req, res) {
 
     // Invoked when a file has finished uploading.
     form.on('file', function (name, file) {
+        uploadedFileName = file.name;
         // Allow only 3 files to be uploaded.
         if (photos.length === 3) {
             fs.unlink(file.path);
@@ -39,7 +42,7 @@ router.post('/upload_image', function (req, res) {
         // Check the file type, must be either png,jpg or jpeg
         if (type !== null && (type.ext === 'png' || type.ext === 'jpg' || type.ext === 'jpeg')) {
             // Assign new file name
-            filename = Date.now() + '-' + file.name;
+            filename = file.name;
 
             // Move the file with the new file name
             fs.rename(file.path, path.join(__dirname, 'uploads/' + filename));
@@ -67,7 +70,19 @@ router.post('/upload_image', function (req, res) {
 
     // Invoked when all the fields have been processed.
     form.on('end', function() {
+        console.log(uploadedFileName);
         console.log('All the request fields have been processed.');
+        client
+            .labelDetection('routes/uploads/'+ uploadedFileName)
+            .then(results => {
+                const labels = results[0].labelAnnotations;
+
+                console.log('Labels:');
+                labels.forEach(label => console.log(label.description));
+            })
+            .catch(err => {
+                console.error('ERROR:', err);
+            });
     });
 
     // Parse the incoming form fields.

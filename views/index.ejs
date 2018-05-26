@@ -45,11 +45,11 @@
           </p>
 
           <div class="row center">
-		  <form id="upload-photos" method="post" action="/upload_photos" enctype="multipart/form-data"">
+		  <form id="upload-photos">
             <h5 class="header col s12 light">Upload your images</h5>
             <input id="photos-input" type="file" name="photos[]" multiple="multiple" onchange="previewFile()">
 			<img src="" height="200" alt="Image preview...">
-			<br><br><input  type="submit" name="Photo Uploads" value="Upload Photos" />
+            <br><br><button  id="upload-button">Upload</button>
 		  </form>
           </div> 
         

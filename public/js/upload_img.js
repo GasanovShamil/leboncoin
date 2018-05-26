@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$('#upload-photos').on('submit', function (event) {
+	$('#upload-button').on('click', function (event) {
     event.preventDefault();
 
     // Get the files from input, create new FormData.
@@ -26,6 +26,7 @@ $(document).ready(function() {
     uploadFiles(formData);
 	}); 
 }
+)
 
 function uploadFiles(formData) {
     $.ajax({
