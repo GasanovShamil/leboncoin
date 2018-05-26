@@ -29,7 +29,7 @@
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <br><br>
-      <h4 class="header center orange-text">Submit your offer</h1>
+      <h4 class="header center orange-text">Submit your offer</h4>
       <div class="row center">
         <h5 class="header col s12 light">You are ...</h5>
         <form action="#">
@@ -43,13 +43,13 @@
               <span>An individual</span>
             </label>
           </p>
-
+        </form>
           <div class="row center">
       <div id="drop-area">
           <form class="my-form">
             <p>Upload multiple files with the file dialog or by dragging and dropping images onto the dashed region</p>
             <input type="file" id="photos-input" multiple accept="image/*" onchange="handleFiles(this.files)">
-            <label class="button" for="photos-input">Select some files</label>
+            <label class="button" for="photos-input">Select file</label>
             <br><br><button  id="upload-button">Upload</button>
           </form>
           <progress id="progress-bar" max=100 value=0></progress>
@@ -57,93 +57,17 @@
           <div id="gallery" /></div>
         </div>
       
-      
-          </div> 
+
         
           <div class="row">
-              <form	> 
-                    <div class="input-field col s12">
-                        <select id = "select1">
-							<option value="0">&laquo;Choisissez une cat&eacute;gorie&raquo;</option>
-							<option value='71' style='background-color:#E6E6E6' disabled id='cat71' >-&#45; EMPLOI -&#45;</option>
-							<option value='33'  id='cat33' >Offres d'emploi</option>
-							<option value='1' style='background-color:#E6E6E6' disabled id='cat1' >-&#45; VEHICULES -&#45;</option>
-							<option value='2'  id='cat2' >Voitures</option>
-							<option value='3'  id='cat3' >Motos</option>
-							<option value='4'  id='cat4' >Caravaning</option>
-							<option value='5'  id='cat5' >Utilitaires</option>
-							<option value='6'  id='cat6' >Equipement Auto</option>
-							<option value='44'  id='cat44' >Equipement Moto</option>
-							<option value='50'  id='cat50' >Equipement Caravaning</option>
-							<option value='7'  id='cat7' >Nautisme</option>
-							<option value='51'  id='cat51' >Equipement Nautisme</option>
-							<option value='8' style='background-color:#E6E6E6' disabled id='cat8' >-&#45; IMMOBILIER -&#45;</option>
-							<option value='9'  id='cat9' >Ventes immobili&egrave;res</option>
-							<option value='10'  id='cat10' >Locations</option>
-							<option value='11'  id='cat11' >Colocations</option>
-							<option value='13'  id='cat13' >Bureaux &amp; Commerces</option>
-							<option value='66' style='background-color:#E6E6E6' disabled id='cat66' >-&#45; VACANCES -&#45;</option>
-							<option value='12'  id='cat12' >Locations &amp; G&icirc;tes</option>
-							<option value='67'  id='cat67' >Chambres d'h&ocirc;tes</option>
-							<option value='68'  id='cat68' >Campings</option>
-							<option value='69'  id='cat69' >H&ocirc;tels</option>
-							<option value='70'  id='cat70' >H&eacute;bergements insolites</option>
-							<option value='14' style='background-color:#E6E6E6' disabled id='cat14' >-&#45; MULTIMEDIA -&#45;</option>
-							<option value='15'  id='cat15' >Informatique</option>
-							<option value='43'  id='cat43' >Consoles &amp; Jeux vid&eacute;o</option>
-							<option value='16'  id='cat16' >Image &amp; Son</option>
-							<option value='17'  id='cat17' >T&eacute;l&eacute;phonie</option>
-							<option value='18' style='background-color:#E6E6E6' disabled id='cat18' >-&#45; MAISON -&#45;</option>
-							<option value='19'  id='cat19' >Ameublement</option>
-							<option value='20'  id='cat20' >Electrom&eacute;nager</option>
-							<option value='45'  id='cat45' >Arts de la table</option>
-							<option value='39'  id='cat39' >D&eacute;coration</option>
-							<option value='46'  id='cat46' >Linge de maison</option>
-							<option value='21'  id='cat21' >Bricolage</option>
-							<option value='52'  id='cat52' >Jardinage</option>
-							<option value='22'  id='cat22' >V&ecirc;tements</option>
-							<option value='53'  id='cat53' >Chaussures</option>
-							<option value='47'  id='cat47' >Accessoires &amp; Bagagerie</option>
-							<option value='42'  id='cat42' >Montres &amp; Bijoux</option>
-							<option value='23'  id='cat23' >Equipement b&eacute;b&eacute;</option>
-							<option value='54'  id='cat54' >V&ecirc;tements b&eacute;b&eacute;</option>
-							<option value='24' style='background-color:#E6E6E6' disabled id='cat24' >-&#45; LOISIRS -&#45;</option>
-							<option value='25'  id='cat25' >DVD / Films</option>
-							<option value='26'  id='cat26' >CD / Musique</option>
-							<option value='27'  id='cat27' >Livres</option>
-							<option value='28'  id='cat28' >Animaux</option>
-							<option value='55'  id='cat55' >V&eacute;los</option>
-							<option value='29'  id='cat29' >Sports &amp; Hobbies</option>
-							<option value='30'  id='cat30' >Instruments de musique</option>
-							<option value='40'  id='cat40' >Collection</option>
-							<option value='41'  id='cat41' >Jeux &amp; Jouets</option>
-							<option value='48'  id='cat48' >Vins &amp; Gastronomie</option>
-							<option value='56' style='background-color:#E6E6E6' disabled id='cat56' >-&#45; MATERIEL PROFESSIONNEL -&#45;</option>
-							<option value='57'  id='cat57' >Mat&eacute;riel Agricole</option>
-							<option value='58'  id='cat58' >Transport &#45; Manutention</option>
-							<option value='59'  id='cat59' >BTP &#45; Chantier Gros&#45;oeuvre</option>
-							<option value='60'  id='cat60' >Outillage &#45; Mat&eacute;riaux 2nd&#45;oeuvre</option>
-							<option value='32'  id='cat32' >&Eacute;quipements Industriels</option>
-							<option value='61'  id='cat61' >Restauration &#45; H&ocirc;tellerie</option>
-							<option value='62'  id='cat62' >Fournitures de Bureau</option>
-							<option value='63'  id='cat63' >Commerces &amp; March&eacute;s</option>
-							<option value='64'  id='cat64' >Mat&eacute;riel M&eacute;dical</option>
-							<option value='31' style='background-color:#E6E6E6' disabled id='cat31' >-&#45; SERVICES -&#45;</option>
-							<option value='34'  id='cat34' >Prestations de services</option>
-							<option value='35'  id='cat35' >Billetterie</option>
-							<option value='49'  id='cat49' >Ev&eacute;nements</option>
-							<option value='36'  id='cat36' >Cours particuliers</option>
-							<option value='65'  id='cat65' >Covoiturage</option>
-							<option value='37' style='background-color:#E6E6E6' disabled id='cat37' >-&#45; -&#45; -&#45;</option>
-							<option value='38'  id='cat38' >Autres</option>
-                        </select>
-                        <label>Category</label>
-				    </div> 
-              </form>
-                </div>
-              </div>
               <div class="row">
                   <form class="col s12">
+                      <div class="row">
+                          <div class="input-field col s12">
+                              <textarea id="textarea0" class="materialize-textarea"></textarea>
+                              <label id="textarealabel0" for="textarea1">Category</label>
+                          </div>
+                      </div>
                     <div class="row">
                       <div class="input-field col s12">
                         <textarea id="textarea1" class="materialize-textarea"></textarea>
@@ -153,15 +77,15 @@
                     <div class="row">
                         <div class="input-field col s12">
                           <textarea id="textarea2" class="materialize-textarea"></textarea>
-                          <label for="textarea2">Description</label>
+                          <label id="textarealabel2" for="textarea2">Description</label>
                         </div>  
                       </div>
                     <div class="row">
                       <div class="input-field col s2">
                           <input type = "number" id="Prix" type="text" class="validate">
-                          <label for="Prix">€ Price</label> 
+                          <label id="PrixLabel" for="Prix">€ Price</label>
                         </div>
-                        <a onClick="location.reload(true)" href="#!" id="download-button" class="btn-large waves-effect waves-light orange" >Suggestion</a>
+                        <a id="suggestion-button" class="btn-large waves-effect waves-light orange" >Suggestion</a>
 					 </div>
                   </form>
                 </div>
@@ -254,7 +178,7 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script> 
-  <script src="js/upload_img.js"></script> 
+  <script src="js/upload_img.js"></script>
   <script>
 	function previewFile() {
 	  var preview = document.querySelector('img');

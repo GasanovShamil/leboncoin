@@ -82,12 +82,12 @@ router.post('/upload_image', function (req, res) {
 					console.log(labels[i].description); 
 					if((labels[i].description === "laptop") || (labels[i].description === "netbook"))
 					{
-						 res.status(200).json({"category": "15"});
+						 res.status(200).json({"category": "IT"});
 						 i = 3;
 					}
 					if((labels[i].description === "mobile phone") || (labels[i].description === "communication device"))
 					{
-						 res.status(200).json({"category":"17"});
+						 res.status(200).json({"category":"Smartphone"});
 						 i = 3;
 					}
 						 
