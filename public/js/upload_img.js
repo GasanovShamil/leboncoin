@@ -34,27 +34,5 @@ function uploadFiles(formData) {
         method: 'post',
         data: formData,
         processData: false,
-        contentType: false,
-        xhr: function () {
-            var xhr = new XMLHttpRequest();
-
-            // Add progress event listener to the upload.
-            xhr.upload.addEventListener('progress', function (event) {
-                var progressBar = $('.progress-bar');
-
-                if (event.lengthComputable) {
-                    var percent = (event.loaded / event.total) * 100;
-                    progressBar.width(percent + '%');
-
-                    if (percent === 100) {
-                        progressBar.removeClass('active');
-                    }
-                }
-            });
-
-            return xhr;
-        }
-    }).done(handleSuccess).fail(function (xhr, status) {
-        alert(status);
-    });
+        contentType: false})
 }
