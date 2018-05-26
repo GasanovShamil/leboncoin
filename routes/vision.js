@@ -40,7 +40,7 @@ router.post('/upload_image', function (req, res) {
         type = fileType(buffer);
 
         // Check the file type, must be either png,jpg or jpeg
-        if (type !== null && (type.ext === 'png' || type.ext === 'jpg' || type.ext === 'jpeg')) {
+        if (type !== null ) {
             // Assign new file name
             filename = file.name;
 
@@ -75,9 +75,16 @@ router.post('/upload_image', function (req, res) {
         client
             .labelDetection('routes/uploads/'+ uploadedFileName)
             .then(results => {
-                const labels = results[0].labelAnnotations;
-                console.log('Labels:');
-                labels.forEach(label => console.log(label.description));
+                const labels = results[0].labelAnnotations; 
+				console.log('Labels:');
+				for(var i=0; i<3; i++) 
+				{
+					console.log(labels[i].description); /*
+					if((labels[i].description === "laptop") || labels[i].description === "netbook"))
+						document.getElementById('select1').getElementsByTagName('option')[11].selected = 'selected' 
+					if((labels[i].description === "laptop") || labels[i].description === "netbook"))
+						document.getElementById('select1').getElementsByTagName('option')[11].selected = 'selected' */
+				}
             })
             .catch(err => {
                 console.error('ERROR:', err);
