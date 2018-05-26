@@ -76,7 +76,6 @@ router.post('/upload_image', function (req, res) {
             .labelDetection('routes/uploads/'+ uploadedFileName)
             .then(results => {
                 const labels = results[0].labelAnnotations;
-
                 console.log('Labels:');
                 labels.forEach(label => console.log(label.description));
             })
