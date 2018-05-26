@@ -72,86 +72,11 @@ function uploadFiles(formData) {
 
         contentType: false,
 
-        xhr: function () {
+        
 
-            var xhr = new XMLHttpRequest();
-
-
-
-            // Add progress event listener to the upload.
-
-            xhr.upload.addEventListener('progress', function (event) {
-
-                var progressBar = $('.progress-bar');
-
-
-
-                if (event.lengthComputable) {
-
-                    var percent = (event.loaded / event.total) * 100;
-
-                    progressBar.width(percent + '%');
-
-
-
-                    if (percent === 100) {
-
-                        progressBar.removeClass('active');
-
-                    }
-
-                }
-
-            });
-
-
-
-            return xhr;
-
-        }
-
-    }).done(handleSuccess).fail(function (xhr, status) {
-
-        alert(status);
+    }).done(function (response) { 
+		 ($("#select1").val(response.category)).selected = true;
 
     });
-
-	function handleSuccess(data) {
-
-    if (data.length > 0) {
-
-        var html = '';
-
-        for (var i=0; i < data.length; i++) {
-
-            var img = data[i];
-
-
-
-            if (img.status) {
-
-                html += '<div class="col-xs-6 col-md-4"><a href="#" class="thumbnail"><img src="' + img.publicPath + '" alt="' + img.filename  + '"></a></div>';
-
-            } else {
-
-                html += '<div class="col-xs-6 col-md-4"><a href="#" class="thumbnail">Invalid file type - ' + img.filename  + '</a></div>';
-
-            }
-
-        }
-
-
-
-        $('#album').html(html);
-
-    } else {
-
-        alert('No images were uploaded.')
-
-    }
-
-	}
-
-
 	
 }

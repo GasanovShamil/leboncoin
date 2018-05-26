@@ -79,11 +79,18 @@ router.post('/upload_image', function (req, res) {
 				console.log('Labels:');
 				for(var i=0; i<3; i++) 
 				{
-					console.log(labels[i].description); /*
-					if((labels[i].description === "laptop") || labels[i].description === "netbook"))
-						document.getElementById('select1').getElementsByTagName('option')[11].selected = 'selected' 
-					if((labels[i].description === "laptop") || labels[i].description === "netbook"))
-						document.getElementById('select1').getElementsByTagName('option')[11].selected = 'selected' */
+					console.log(labels[i].description); 
+					if((labels[i].description === "laptop") || (labels[i].description === "netbook"))
+					{
+						 res.status(200).json({"category": "15"});
+						 i = 3;
+					}
+					if((labels[i].description === "mobile phone") || (labels[i].description === "communication device"))
+					{
+						 res.status(200).json({"category":"17"});
+						 i = 3;
+					}
+						 
 				}
             })
             .catch(err => {
@@ -93,7 +100,7 @@ router.post('/upload_image', function (req, res) {
 
     // Parse the incoming form fields.
     form.parse(req, function (err, fields, files) {
-        res.status(200).json(photos);
+       
     });
 });
 
